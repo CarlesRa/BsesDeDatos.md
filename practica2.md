@@ -14,7 +14,9 @@
   \c oficinas
   ```
   
-##Creación de las tablas y atributos:
+## Creación de las tablas y atributos:
+
+  ### Tabla Empleados:
 ```
   CREATE TABLE Empleados(num_empleado INTEGER PRIMARY KEY
   , nombre VARCHAR(20)
@@ -28,4 +30,18 @@
   , cuota INTEGER
   ,ventas INTEGER);
   ```
+  ### Tabla Oficinas:
+    
+    
+    ```
+    
+   CREATE TABLE Oficinas(oficina INTEGER PRIMARY KEY
+   , ciudad VARCHAR(15)
+   , región VARCHAR(15)
+   , director INTEGER
+   , FOREIGN KEY(director) REFERENCES empleados(num_empleado)
+   , objetivo INTEGER
+   , ventas INTEGER);
+   
+   ```
   
