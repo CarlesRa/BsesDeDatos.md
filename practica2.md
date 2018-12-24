@@ -33,7 +33,7 @@
   ### Tabla Oficinas:
     
     
-    ```
+ ```
     
    CREATE TABLE Oficinas(oficina INTEGER PRIMARY KEY
    , ciudad VARCHAR(15)
