@@ -28,7 +28,7 @@
   , jefe INTEGER
   , FOREING KEY(jefe) REFERENCES empleados(num_empleado)
   , cuota INTEGER
-  ,ventas INTEGER);
+  , ventas INTEGER);
   ```
   ### Tabla Oficinas:
     
