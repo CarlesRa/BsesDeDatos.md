@@ -41,4 +41,39 @@
    , objetivo INTEGER
    , ventas INTEGER);
    ```
+  ### Tabla Clientes:
   
+  ```
+  CREATE TABLE Clientes(num_cliente INTEGER PRIMARY KEY
+  , nombre VARCHAR(20)
+  , repcli INTEGER
+  , limiteCredito INTEGER);
+  ```
+  ### Tabla Productos:
+  
+  ```
+  CREATE TABLE Productos(id_fab INTEGER
+  , id_producto INTEGER
+  , PRIMARY KEY (id_fab,id_producto)
+  , descripcion VARCHAR(50)
+  , precio INTEGER
+  , existencias INTEGER);
+  ```
+  ### Tabla Pedidos:
+  
+  ```
+  CREATE TABLE Pedidos(codigo INTEGER
+  , num_pedido INTEGER
+  , fecha_pedido TIMESTAMP
+  , PRIMARY KEY (codigo,num_pedido,fecha_pedido)
+  , clie INTEGER
+  , FOREIGN KEY(clie) REFERENCES clientes(num_cliente)
+  , rep INTEGER
+  , FOREIGN KEY(rep) REFERENCES empleados(num_empleados)
+  , fab VARCHAR(50)
+  , producto INTEGER
+  , FOREIGN KEY(producto) REFERENCES Productos(id_producto)
+  , cantidad INTEGER
+  , importe INTEGER);
+  ```
+   
