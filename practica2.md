@@ -2,15 +2,14 @@
 
 ## Creación de la base de datos:
 
+  
   ```
   sudo -i -u postgres
   psql
   CREATE DATABASE oficina;
-  
   ```
 ## Conectar a la base de datos:
   ```
-  
   \c oficinas
   ```
   
@@ -34,14 +33,12 @@
     
     
  ```
-    
-   CREATE TABLE Oficinas(oficina INTEGER PRIMARY KEY
+    CREATE TABLE Oficinas(oficina INTEGER PRIMARY KEY
    , ciudad VARCHAR(15)
    , región VARCHAR(15)
    , director INTEGER
    , FOREIGN KEY(director) REFERENCES empleados(num_empleado)
    , objetivo INTEGER
    , ventas INTEGER);
-   
    ```
   
