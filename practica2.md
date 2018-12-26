@@ -77,24 +77,24 @@
   ALTER TABLE Clientes ADD COLUMN limiteCredito INTEGER;
   ```
   ### Añadimos a empleados las claves foraneas que le faltan:
-```
+  ```
   ALTER TABLE Empleados ADD FOREIGN KEY (oficina) REFERENCES Oficinas(oficina);
   ALTER TABLE Empleados ADD FOREIGN KEY (jefe) REFERENCES Empleados(num_empleado);
-```
+  ```
   ### Creamos restricción en la tabla empleados:
  ```
   ALTER TABLE Empleados ADD CONSTRAINT nombre UNIQUE(nombre);
  ```
   ### Añadir a pedidos la clave principal:
-```
+  ```
   ALTER TABLE Pedidos ADD PRIMARY KEY (num_pedido, fecha_pedido);
-```
+  ```
   ### Definimos un indice sobre la columna region de la tabla oficinas:
-```
+  ```
   CREATE INDEX regiones ON oficinas(region);
-```
+  ```
   ### Borramos el indice:
- ```
+  ```
   DROP INDEX regiones ON oficinas(region);
- ```
-  ### 
+  ```
+  
