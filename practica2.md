@@ -13,7 +13,7 @@
   \c oficinas
   ```
   
-## Creación de las tablas y atributos:
+## Creación de las tablas y columnas:
 
   ### Tabla Empleados:
 ```
