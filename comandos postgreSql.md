@@ -13,7 +13,7 @@
 ```
 ## Crear tablas:
 ```
-  CREATE TABLE {nombre_tabla]([atributo][tipo_dato][restriccion]);
+  CREATE TABLE {nombre_tabla]([columna][tipo_dato][restriccion]);
 ```
 ## Modificar tablas:
 ```
