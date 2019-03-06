@@ -16,7 +16,7 @@
 ## Creación de las tablas y columnas:
 
   ### Tabla Empleados:
-```
+```sql
   CREATE TABLE Empleados(num_empleado INTEGER PRIMARY KEY
   , nombre VARCHAR(20)
   , edad INTEGER
@@ -30,7 +30,7 @@
   ### Tabla Oficinas:
     
     
- ```
+ ```sql
     CREATE TABLE Oficinas(oficina INTEGER PRIMARY KEY
    , ciudad VARCHAR(15)
    , región VARCHAR(15)
@@ -41,14 +41,14 @@
    ```
   ### Tabla Clientes:
   
-  ```
+  ```sql
   CREATE TABLE Clientes(num_cliente INTEGER PRIMARY KEY
   , nombre VARCHAR(20)
   , repcli INTEGER);
   ```
   ### Tabla Productos:
   
-  ```
+  ```sql
   CREATE TABLE Productos(id_fab INTEGER
   , id_producto INTEGER
   , PRIMARY KEY (id_fab,id_producto)
@@ -58,7 +58,7 @@
   ```
   ### Tabla Pedidos:
   
-  ```
+  ```sql
   CREATE TABLE Pedidos(codigo INTEGER
   , num_pedido INTEGER
   , fecha_pedido TIMESTAMP
@@ -73,28 +73,28 @@
   , importe INTEGER);
   ```
   ### Añadimos a Clientes la columna "limiteCredito":
-  ```
+  ```sql
   ALTER TABLE Clientes ADD COLUMN limiteCredito INTEGER;
   ```
   ### Añadimos a empleados las claves foraneas que le faltan:
-  ```
+  ```sql
   ALTER TABLE Empleados ADD FOREIGN KEY (oficina) REFERENCES Oficinas(oficina);
   ALTER TABLE Empleados ADD FOREIGN KEY (jefe) REFERENCES Empleados(num_empleado);
   ```
   ### Creamos restricción en la tabla empleados:
- ```
+ ```sql
   ALTER TABLE Empleados ADD CONSTRAINT nombre UNIQUE(nombre);
  ```
   ### Añadir a pedidos la clave principal:
-  ```
+  ```sql
   ALTER TABLE Pedidos ADD PRIMARY KEY (num_pedido, fecha_pedido);
   ```
   ### Definimos un indice sobre la columna region de la tabla oficinas:
-  ```
+  ```sql
   CREATE INDEX regiones ON oficinas(region);
   ```
   ### Borramos el indice:
-  ```
+  ```sql
   DROP INDEX regiones ON oficinas(region);
   ```
   
